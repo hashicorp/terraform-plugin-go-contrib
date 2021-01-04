@@ -1,4 +1,4 @@
-package asdefaults
+package asgotypes
 
 import (
 	"errors"
@@ -8,11 +8,11 @@ import (
 	"github.com/hashicorp/terraform-plugin-go/tfprotov5/tftypes"
 )
 
-// DefaultType is a way to get at the contents of a tftypes.Value without
+// GoPrimitive is a way to get at the contents of a tftypes.Value without
 // asserting anything about the tftypes.Value except that it is fully known. It
 // is the equivalent of unmarshalling JSON to an interface{}.
 //
-// DefaultType is not meant to be used during normal Terraform development. As
+// GoPrimitive is not meant to be used during normal Terraform development. As
 // tempting as it is, you should not use it during normal provider development
 // to obtain easy access to the contents of a tftypes.Value as a standard Go
 // type. Terraform relies heavily on the concept of unknown values; values that
@@ -23,20 +23,20 @@ import (
 // type is unknown, and the Go type will not be able to preserve that
 // information.
 //
-// DefaultType is largely a helper for debugging and the very, very rare cases
+// GoPrimitive is largely a helper for debugging and the very, very rare cases
 // when a value is guaranteed to be fully known by the Terraform protocol (for
 // example, when working with the PlannedState of ApplyResourceChange when none
 // of the attributes are Computed) and the provider wants to pass an opaque
 // blob of information to an API and doesn't know or care about the types
 // involved. When the types are known ahead of time, other helpers are more
 // appropriate.
-type DefaultType struct {
+type GoPrimitive struct {
 	Value interface{}
 }
 
-// FromTerraform5Value controls how the DefaultType will be populated by a
+// FromTerraform5Value controls how the GoPrimitive will be populated by a
 // tftypes.Value.
-func (dt *DefaultType) FromTerraform5Value(value tftypes.Value) error {
+func (dt *GoPrimitive) FromTerraform5Value(value tftypes.Value) error {
 	if !value.IsKnown() {
 		return errors.New("cannot decode unknown values to Go types")
 	}
@@ -77,12 +77,12 @@ func (dt *DefaultType) FromTerraform5Value(value tftypes.Value) error {
 		}
 		res := map[string]interface{}{}
 		for k, v := range msv {
-			var vdt DefaultType
-			err = v.As(&vdt)
+			var vgp GoPrimitive
+			err = v.As(&vgp)
 			if err != nil {
 				return err
 			}
-			res[k] = vdt.Value
+			res[k] = vgp.Value
 		}
 		dt.Value = res
 		return nil
@@ -94,12 +94,12 @@ func (dt *DefaultType) FromTerraform5Value(value tftypes.Value) error {
 		}
 		res := []interface{}{}
 		for _, v := range vals {
-			var vdt DefaultType
-			err = v.As(&vdt)
+			var vgp GoPrimitive
+			err = v.As(&vgp)
 			if err != nil {
 				return err
 			}
-			res = append(res, vdt.Value)
+			res = append(res, vgp.Value)
 		}
 		dt.Value = res
 		return nil
@@ -115,12 +115,12 @@ func (dt *DefaultType) FromTerraform5Value(value tftypes.Value) error {
 			return nil
 		}
 		for _, v := range vals {
-			var vdt DefaultType
-			err = v.As(&vdt)
+			var vgp GoPrimitive
+			err = v.As(&vgp)
 			if err != nil {
 				return err
 			}
-			tmp = append(tmp, vdt.Value)
+			tmp = append(tmp, vgp.Value)
 		}
 		typ := reflect.TypeOf(tmp[0])
 		sliceTyp := reflect.SliceOf(typ)
@@ -143,15 +143,15 @@ func (dt *DefaultType) FromTerraform5Value(value tftypes.Value) error {
 		}
 		var typ reflect.Type
 		for k, v := range msv {
-			var vdt DefaultType
-			err = v.As(&vdt)
+			var vgp GoPrimitive
+			err = v.As(&vgp)
 			if err != nil {
 				return err
 			}
 			if typ == nil {
-				typ = reflect.TypeOf(vdt.Value)
+				typ = reflect.TypeOf(vgp.Value)
 			}
-			tmp[k] = vdt.Value
+			tmp[k] = vgp.Value
 		}
 		mapTyp := reflect.MapOf(reflect.TypeOf(""), typ)
 		res := reflect.MakeMapWithSize(mapTyp, len(tmp))

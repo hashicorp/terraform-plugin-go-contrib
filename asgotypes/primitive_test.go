@@ -1,4 +1,4 @@
-package asdefaults
+package asgotypes
 
 import (
 	"math/big"
@@ -8,7 +8,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-go/tfprotov5/tftypes"
 )
 
-func TestDefaultType(t *testing.T) {
+func TestGoPrimitive(t *testing.T) {
 	type testCase struct {
 		tfval    tftypes.Value
 		expected interface{}
@@ -382,7 +382,7 @@ func TestDefaultType(t *testing.T) {
 		name, testCase := name, testCase
 		t.Run(name, func(t *testing.T) {
 			t.Parallel()
-			var res DefaultType
+			var res GoPrimitive
 			err := testCase.tfval.As(&res)
 			if err != nil {
 				t.Fatal(err)

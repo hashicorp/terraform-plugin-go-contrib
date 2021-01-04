@@ -1,4 +1,4 @@
-package asdefaults
+package asgotypes
 
 import (
 	"math/big"
