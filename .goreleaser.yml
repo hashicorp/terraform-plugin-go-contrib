@@ -1,4 +1,4 @@
-project_name: terraform-plugin-go-patterns
+project_name: terraform-plugin-go-contrib
 build:
   skip: true
 release:

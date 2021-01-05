@@ -1,17 +1,17 @@
-[![PkgGoDev](https://pkg.go.dev/badge/github.com/hashicorp/terraform-plugin-go-patterns)](https://pkg.go.dev/github.com/hashicorp/terraform-plugin-go-patterns)
+[![PkgGoDev](https://pkg.go.dev/badge/github.com/hashicorp/terraform-plugin-go-contrib)](https://pkg.go.dev/github.com/hashicorp/terraform-plugin-go-contrib)
 
-# terraform-plugin-go-patterns
+# terraform-plugin-go-contrib
 
-terraform-plugin-go-patterns provides a set of common patterns that can be used
+terraform-plugin-go-contrib provides a set of packages that can be used
 with [terraform-plugin-go](https://github.com/hashicorp/terraform-plugin-go).
 It is a loose collection of common code that can be used when building
 providers, but is not necessary for building providers with
-terraform-plugin-go, and not every pattern is useful, applicable, or
+terraform-plugin-go, and not every package is useful, applicable, or
 appropriate for every provider.
 
 ## Status
 
-terraform-plugin-go-patterns is a [Go
+terraform-plugin-go-contrib is a [Go
 module](https://github.com/golang/go/wiki/Modules) versioned using [semantic
 versioning](https://semver.org).
 
@@ -29,7 +29,7 @@ incompatible ways and they are expected to be tracking these changes.
 
 Documentation is a work in progress. The GoDoc for packages, types, functions,
 and methods should have complete information, but we're working to add
-documentation about the use cases, semantics, and intricacies of each pattern.
+documentation about the use cases, semantics, and intricacies of each package.
 
 Please bear with us as we work to get this information published, and please
 [open
@@ -38,17 +38,17 @@ with requests for the kind of documentation you would find useful.
 
 ## Scope
 
-This module is attempting to gather a loose collection of patterns. It is not
-meant to encompass every pattern people may use with terraform-plugin-go, but
-rather a subset of patterns that we feel are useful to a significantly large
-enough percentage of the community. Patterns must have enough utility to
+This module is attempting to gather a loose collection of packages. It is not
+meant to encompass every package people may use with terraform-plugin-go, but
+rather a subset of packages that we feel are useful to a significantly large
+enough percentage of the community. Packages must have enough utility to
 justify the cost of their ongoing maintenance and the additional cost to
-discovery all patterns will have when a new one is added.
+discovery all packages will have when a new one is added.
 
 ## Contributing
 
-Please see [`.github/CONTRIBUTING.md`](https://github.com/hashicorp/terraform-plugin-go-patterns/blob/main/CONTRIBUTING.md).
+Please see [`.github/CONTRIBUTING.md`](https://github.com/hashicorp/terraform-plugin-go-contrib/blob/main/CONTRIBUTING.md).
 
 ## License
 
-This module is licensed under the [Mozilla Public License v2.0](https://github.com/hashicorp/terraform-plugin-go-patterns/blob/main/LICENSE).
+This module is licensed under the [Mozilla Public License v2.0](https://github.com/hashicorp/terraform-plugin-go-contrib/blob/main/LICENSE).

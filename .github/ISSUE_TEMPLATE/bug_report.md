@@ -4,15 +4,15 @@ about: Let us know about an unexpected error, a crash, or an incorrect behavior.
 labels: bug
 ---
 
-### terraform-plugin-go-patterns version
+### terraform-plugin-go-contrib version
 <!---
 Inspect your go.mod as below to find the version, and paste the result between
 the ``` marks below.
 
-go list -m github.com/hashicorp/terraform-plugin-go-patterns/...
+go list -m github.com/hashicorp/terraform-plugin-go-contrib/...
 go list -m github.com/hashicorp/terraform-plugin-go/...
 
-If you are not running the latest version of terraform-plugin-go-patterns or
+If you are not running the latest version of terraform-plugin-go-contrib or
 terraform-plugin-go, please try upgrading because your bug may have already
 been fixed.
 -->

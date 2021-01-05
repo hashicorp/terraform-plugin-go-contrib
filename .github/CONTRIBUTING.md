@@ -1,4 +1,4 @@
-# Contributing to terraform-plugin-go-patterns
+# Contributing to terraform-plugin-go-contrib
 
 **First:** if you're unsure or afraid of _anything_, just ask
 or submit the issue describing the problem you're aiming to solve.
@@ -23,7 +23,7 @@ while we're on v0, breaking changes will be accepted during minor releases.
 ## I just have a question
 
 > **Note:** We use GitHub for tracking bugs and feature requests related to
-> terraform-plugin-go-patterns.
+> terraform-plugin-go-contrib.
 
 For questions, please see relevant channels at
 https://www.terraform.io/community.html
@@ -43,7 +43,7 @@ type.
 
  - [ ] **Test against latest release**: Make sure you test against the latest
    avaiable version of Terraform, terraform-plugin-go, and
-   terraform-plugin-go-patterns. It is possible we already fixed the bug you're
+   terraform-plugin-go-contrib. It is possible we already fixed the bug you're
    experiencing.
 
  - [ ] **Search for duplicates**: It's helpful to keep bug reports consolidated
@@ -91,7 +91,7 @@ recommend starting by describing and discussing your problem or feature and
 attaching use cases to an issue first before raising a pull request.
 
 - [ ] **Early validation of idea and implementation plan**:
-  terraform-plugin-go-patterns is complicated enough that there are often
+  terraform-plugin-go-contrib is complicated enough that there are often
   several ways to implement something, each of which has different implications
   and tradeoffs. Working through a plan of attack with the team before you dive
   into implementation will help ensure that you're working in the right

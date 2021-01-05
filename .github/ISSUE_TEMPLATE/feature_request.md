@@ -4,14 +4,14 @@ about: Suggest a new feature or other enhancement.
 labels: enhancement
 ---
 
-### terraform-plugin-go-patterns version
+### terraform-plugin-go-contrib version
 <!--
 Inspect your go.mod as below to find the version, and paste the result between the ``` marks below.
 
-go list -m github.com/hashicorp/terraform-plugin-go-patterns/...
+go list -m github.com/hashicorp/terraform-plugin-go-contrib/...
 go list -m github.com/hashicorp/terraform-plugin-go/...
 
-If you are not running the latest version of terraform-plugin-go-patterns or
+If you are not running the latest version of terraform-plugin-go-contrib or
 terraform-plugin-go, please try upgrading because your feature may have already
 been implemented.
 -->
@@ -31,7 +31,7 @@ a moment, below!
 ### Attempted solutions
 <!---
 If you've already tried to solve the problem within
-terraform-plugin-go-patterns' existing features and found a limitation that
+terraform-plugin-go-contrib's existing features and found a limitation that
 prevented you from succeeding, please describe it below in as much detail as
 possible.
 
@@ -46,7 +46,7 @@ configuration snippets and commands.
 ### Proposal
 <!---
 If you have an idea for a way to address the problem via a change to
-terraform-plugin-go-patterns, please describe it below.
+terraform-plugin-go-contrib, please describe it below.
 
 In this section, it's helpful to include specific examples of how what you are
 suggesting might look like in configuration files, on the command line, or in
