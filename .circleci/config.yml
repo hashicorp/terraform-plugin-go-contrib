@@ -76,7 +76,7 @@ jobs:
     steps:
       - add_ssh_keys:
           fingerprints:
-            - "e4:90:79:81:db:0f:b7:53:be:6e:58:81:40:34:47:1d"
+            - "11:11:d6:35:9b:24:b5:21:96:ef:ae:7d:99:2e:90:2d"
       - get_dependencies
       - run: ./scripts/release/release.sh
 
