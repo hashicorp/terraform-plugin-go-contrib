@@ -117,12 +117,14 @@ workflows:
             branches:
               only:
                 - main
+                - paddy_scaffolding
           type: approval
       - "docker-go114 release":
           filters:
             branches:
               only:
                 - main
+                - paddy_scaffolding
           requires:
             - trigger-release
             - "docker-go114 test"
