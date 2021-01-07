@@ -1,4 +1,4 @@
-# 0.0.1 (Unreleased)
+# 0.0.1 (January 07, 2021)
 
 FEATURES
 
