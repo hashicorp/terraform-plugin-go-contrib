@@ -301,7 +301,7 @@ func v5tov6PlanResourceChangeResponse(in *tfprotov5.PlanResourceChangeResponse) 
 		RequiresReplace:             in.RequiresReplace,
 		PlannedPrivate:              in.PlannedPrivate,
 		Diagnostics:                 v5tov6Diagnostics(in.Diagnostics),
-		UnsafeToUseLegacyTypeSystem: in.UnsafeToUseLegacyTypeSystem,
+		UnsafeToUseLegacyTypeSystem: in.UnsafeToUseLegacyTypeSystem, //nolint:staticcheck
 	}
 }
 
@@ -327,7 +327,7 @@ func v5tov6ApplyResourceChangeResponse(in *tfprotov5.ApplyResourceChangeResponse
 		NewState:                    v5tov6DynamicValue(in.NewState),
 		Private:                     in.Private,
 		Diagnostics:                 v5tov6Diagnostics(in.Diagnostics),
-		UnsafeToUseLegacyTypeSystem: in.UnsafeToUseLegacyTypeSystem,
+		UnsafeToUseLegacyTypeSystem: in.UnsafeToUseLegacyTypeSystem, //nolint:staticcheck
 	}
 }
 
