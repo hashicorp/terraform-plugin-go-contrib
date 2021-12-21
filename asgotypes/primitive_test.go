@@ -56,7 +56,7 @@ func TestGoPrimitive(t *testing.T) {
 			expected: []string{"foo", "bar", "baz", "quux"},
 		},
 		"set-string": {
-			tfval: tftypes.NewValue(tftypes.List{
+			tfval: tftypes.NewValue(tftypes.Set{
 				ElementType: tftypes.String,
 			}, []tftypes.Value{
 				tftypes.NewValue(tftypes.String, "foo"),
