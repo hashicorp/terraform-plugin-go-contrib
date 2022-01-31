@@ -82,7 +82,7 @@ func TestGoPrimitive(t *testing.T) {
 		},
 		"map-string": {
 			tfval: tftypes.NewValue(tftypes.Map{
-				AttributeType: tftypes.String,
+				ElementType: tftypes.String,
 			}, map[string]tftypes.Value{
 				"a": tftypes.NewValue(tftypes.String, "foo"),
 				"b": tftypes.NewValue(tftypes.String, "bar"),
@@ -97,7 +97,7 @@ func TestGoPrimitive(t *testing.T) {
 		"list-map-set-object-string-string-bool": {
 			tfval: tftypes.NewValue(tftypes.List{
 				ElementType: tftypes.Map{
-					AttributeType: tftypes.Set{
+					ElementType: tftypes.Set{
 						ElementType: tftypes.Object{
 							AttributeTypes: map[string]tftypes.Type{
 								"a": tftypes.String,
@@ -109,7 +109,7 @@ func TestGoPrimitive(t *testing.T) {
 				},
 			}, []tftypes.Value{
 				tftypes.NewValue(tftypes.Map{
-					AttributeType: tftypes.Set{
+					ElementType: tftypes.Set{
 						ElementType: tftypes.Object{
 							AttributeTypes: map[string]tftypes.Type{
 								"a": tftypes.String,
@@ -185,7 +185,7 @@ func TestGoPrimitive(t *testing.T) {
 					}),
 				}),
 				tftypes.NewValue(tftypes.Map{
-					AttributeType: tftypes.Set{
+					ElementType: tftypes.Set{
 						ElementType: tftypes.Object{
 							AttributeTypes: map[string]tftypes.Type{
 								"a": tftypes.String,
@@ -352,7 +352,7 @@ func TestGoPrimitive(t *testing.T) {
 		},
 		"map-list-string": {
 			tfval: tftypes.NewValue(tftypes.Map{
-				AttributeType: tftypes.List{
+				ElementType: tftypes.List{
 					ElementType: tftypes.String,
 				},
 			}, map[string]tftypes.Value{
