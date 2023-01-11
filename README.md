@@ -2,6 +2,8 @@
 
 # terraform-plugin-go-contrib
 
+_Archive Notice: This project never gained traction and is no longer being considered for future changes._
+
 terraform-plugin-go-contrib provides a set of packages that can be used
 with [terraform-plugin-go](https://github.com/hashicorp/terraform-plugin-go).
 It is a loose collection of common code that can be used when building
